@@ -1,0 +1,177 @@
+#budgetTypesEditor {
+  background-color: rgb(189, 216, 243);
+  width: 360px;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 8px black;
+  -webkit-box-shadow: 0 0 8px black;
+  box-shadow: 0 0 8px black;
+}
+
+#transactionRuleEditor {
+  background-color: rgb(200, 243, 183);
+  width: 360px;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 8px black;
+  -webkit-box-shadow: 0 0 8px black;
+  box-shadow: 0 0 8px black;
+}
+
+.mymoney-table td {
+  font-size: 10pt;
+}
+
+.mymoney-table th {
+  font-size: 10pt;
+  background-color: #17246b;
+  text-align: center;
+  color: white;
+}
+
+.mymoney-table tfoot td {
+  background-color: #17246b;
+  color: white;
+  height: 20px;
+}
+
+.mymoney-table tr:nth-child(odd) {
+  background-color: #f5f0f0;
+}
+.mymoney-table tr:nth-child(even) {
+  background-color: rgb(231, 228, 228);
+}
+
+.test {
+  background-color: rgb(221, 208, 208);
+}
+.mymoney-table {
+  border-collapse: separate;
+  border-spacing: 6px;
+  *border-collapse: expression("separate", cellSpacing= "10px");
+}
+
+.mymoney-table td {
+  padding: 5px;
+}
+
+.trans-list-table {
+  width: 940px;
+}
+.editorRow {
+  display: none;
+}
+
+.openEditor {
+  display: block;
+}
+
+.narrative {
+  padding: 5px;
+}
+
+.data-small {
+  font-size: small;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+h3 {
+  font-style: italic;
+  text-shadow: 1px 2px 2px black;
+}
+
+#mapperTable {
+  -moz-box-shadow: 0 0 8px black;
+  -webkit-box-shadow: 0 0 8px black;
+  box-shadow: 0 0 8px black;
+}
+.mapperTable label {
+  display: block;
+}
+
+#mapperTable tbody tr {
+  background-color: #e4dede;
+  padding-left: 10px;
+}
+
+#mapperTable tbody td {
+  padding-left: 10px;
+}
+
+#amount {
+  text-align: center;
+}
+
+.leftlabels {
+  /* display: block; */
+  width: 220px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.mappingLabels {
+  width: 160px;
+  background-color: #e4dede;
+  height: 32px;
+}
+
+.dateField {
+  width: 120px !important;
+  text-align: center;
+}
+
+.amountField {
+  width: 140px !important;
+  margin-right: 10px;
+}
+
+.page-container {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.search-form {
+  background-color: lightgray;
+  padding: 20px;
+  width: 550px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  -moz-box-shadow: 0 0 8px black;
+  -webkit-box-shadow: 0 0 8px black;
+  box-shadow: 0 0 8px black;
+}
+
+.dashboard-form {
+  width: 580px;
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  -moz-box-shadow: 0 0 8px black;
+  -webkit-box-shadow: 0 0 8px black;
+  box-shadow: 0 0 8px black;
+}
+
+.dashboard-btn {
+  width: 100px;
+}
+
+.spacer {
+  margin-left: 20px;
+}
