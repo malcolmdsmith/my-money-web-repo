@@ -59,7 +59,7 @@ class FormState extends Component {
   };
 
   handleChange = ({ currentTarget: input }) => {
-    console.info(input);
+    //console.info(input);
     let errors = { ...this.state.errors };
     let errorMessage = "";
     if (input.name === "confirm_password")

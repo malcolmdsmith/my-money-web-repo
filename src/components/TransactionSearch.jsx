@@ -211,13 +211,13 @@ class TransactionSearch extends FormState {
                   "dateField"
                 )}
                 <Button
-                  title="-"
+                  icon="backward"
                   className="button primary"
                   onPress={this.handleDecrease}
                   width="100px"
                 />
                 <Button
-                  title="+"
+                  icon="forward"
                   className="button primary"
                   onPress={this.handleIncrease}
                 />
@@ -252,7 +252,8 @@ class TransactionSearch extends FormState {
                 )}
                 <div style={{ marginTop: "20px" }}>
                   <Button
-                    title="x"
+                    icon="window-close"
+                    color="white"
                     className="button primary"
                     onPress={this.handleClearCategory}
                   />
@@ -275,7 +276,7 @@ class TransactionSearch extends FormState {
                 )}
                 <div style={{ marginTop: "20px" }}>
                   <Button
-                    title="x"
+                    icon="window-close"
                     className="button primary"
                     onPress={this.handleClearAmounts}
                   />
@@ -297,7 +298,7 @@ class TransactionSearch extends FormState {
                 )}
                 <div style={{ marginTop: "20px" }}>
                   <Button
-                    title="x"
+                    icon="window-close"
                     className="button primary"
                     onPress={this.handleClearKeywords}
                   />

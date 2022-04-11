@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 import mymoney from "../../images/Originalmycentered.png";
 import { getCurrentUser, logout } from "../../services/authService";
-//import dollarsigns from "../../images/dollarsigns.jpeg";
 import Button from "./button";
 import GetDate from "./getDate";
 
@@ -69,16 +68,6 @@ const AppHeader = () => {
           alt="mymoney.jpg"
           style={{ height: "100px", margin: "5px" }}
         />
-        {/* <img
-          src={dollarsigns}
-          alt="dollarsigns.jpeg"
-          style={{ width: "100%", height: "100px", opacity: "0.6" }}
-        />
-        <img
-          src={dollarsigns}
-          alt="dollarsigns.jpeg"
-          style={{ width: "100%", height: "100px", opacity: "0.6" }}
-        /> */}
         <div className="slogan-container">
           <div className="slogan">
             "Are you in charge of your money? Keep track of your spending!"
