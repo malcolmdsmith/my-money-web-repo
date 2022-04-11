@@ -26,7 +26,7 @@ class Dashboard extends FormState {
     dateTo: getToday().dateTo,
     prevNumWeeksToShow: 2,
     prevStartDate: getToday().dateFrom,
-    numWeeksList: [{ weeks: 1 }, { weeks: 2 }, { weeks: 4 }],
+    numWeeksList: [{ weeks: 1 }, { weeks: 2 }, { weeks: 4 }, { weeks: 8 }],
     summary: { totalIncome: 0, totalExpenses: 0 },
     errors: {},
     transactionCount: 0,
@@ -197,7 +197,7 @@ class Dashboard extends FormState {
         <Heading title="Dashboard" />
         <form
           onSubmit={this.handleSubmit}
-          className="horizontal-align-bottom dashboard-form"
+          className="horizontal-align-bottom dashboard-form box-shadow"
         >
           <div style={{ width: "120px" }}>
             {this.renderDate(
@@ -216,7 +216,7 @@ class Dashboard extends FormState {
             "weeks",
             "clipboard-list"
           )}
-          <div className="horizontal-align spacer">
+          <div className="horizontal-align-bottom spacer">
             <div style={{ display: "flex", flexDirection: "row" }}>
               <label for="includeRent">Show Rent</label>&nbsp;
               <input

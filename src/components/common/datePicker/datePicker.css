@@ -15,24 +15,24 @@
   text-align: center;
   border: 1px solid darkgray;
   color: black;
-  background-color: rgb(16, 151, 28);
+  /* background-color: rgb(16, 151, 28); */
 }
 
 .dayCellCurrent {
   width: 30px;
   text-align: center;
-  border: 1px solid darkgray;
+  /* border: 1px solid darkgray; */
   color: black;
-  background-color: rgb(107, 194, 95);
+  background-color: rgb(223, 226, 223);
   cursor: pointer;
 }
 
 .dayCellNonCurrent {
   width: 30px;
   text-align: center;
-  border: 1px solid darkgray;
+  /* border: 1px solid darkgray; */
   color: gray;
-  background-color: rgb(167, 209, 181);
+  background-color: rgb(228, 241, 233);
   cursor: pointer;
 }
 

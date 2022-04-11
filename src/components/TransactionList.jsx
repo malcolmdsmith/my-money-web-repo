@@ -11,6 +11,8 @@ const TransactionList = ({ searchData, onTransactionUpdated }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize] = useState(100);
   const [itemCount, setItemCount] = useState(0);
+  const [totalDebits, setTotalDebits] = useState(0);
+  const [totalCredits, setTotalCredits] = useState(0);
 
   const ref = useRef(null);
 
@@ -30,7 +32,17 @@ const TransactionList = ({ searchData, onTransactionUpdated }) => {
     console.info("count..", searchResult.totalCount);
     setTransactions(searchResult.transactions);
     setItemCount(searchResult.totalCount);
+    calcTotals(searchResult.transactions);
     ref.current.scrollIntoView();
+  };
+
+  const calcTotals = (transactions) => {
+    const debits = transactions.map((trans) => parseFloat(trans.debitAmount));
+    const totalDebits = debits.reduce((partialSum, a) => partialSum + a, 0);
+    setTotalDebits(totalDebits.toFixed(2));
+    const credits = transactions.map((trans) => parseFloat(trans.creditAmount));
+    const totalCredits = credits.reduce((partialSum, a) => partialSum + a, 0);
+    setTotalCredits(totalCredits.toFixed(2));
   };
 
   const handleDoneCategoryEdit = (updated) => {
@@ -79,7 +91,7 @@ const TransactionList = ({ searchData, onTransactionUpdated }) => {
       <div ref={ref}>
         <Heading title="Transactions" />
       </div>
-      <table className="mymoney-table trans-list-table">
+      <table className="mymoney-table trans-list-table box-shadow">
         <thead>
           <tr>
             <th colSpan="8">
@@ -93,6 +105,14 @@ const TransactionList = ({ searchData, onTransactionUpdated }) => {
                 itemCount={itemCount}
               />
             </th>
+          </tr>
+          <tr>
+            <td colSpan="3" align="right">
+              TOTALS:
+            </td>
+            <td align="center">{totalDebits}</td>
+            <td align="center">{totalCredits}</td>
+            <td colspan="3"></td>
           </tr>
           <tr>
             <th></th>

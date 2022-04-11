@@ -12,16 +12,20 @@ const IncomeExpenseList = ({
       if (parseInt(total) === 0)
         return (
           <div>
-            <div>
+            <div className="bold">
               Total {totalType}: {total}
             </div>
+            <hr className="hr-line" />
             <div>No activity found for period.</div>
           </div>
         );
       else
         return (
           <div>
-            Total {totalType}: {total}
+            <div className="bold">
+              Total {totalType}: {total}
+            </div>
+            <hr className="hr-line" />
           </div>
         );
     }
@@ -32,13 +36,7 @@ const IncomeExpenseList = ({
       {getTotalDescrpiption()}
       {parseInt(total) > 0 ? (
         <div>
-          <table className="mymoney-table">
-            <thead>
-              <tr>
-                <th>{totalType}</th>
-                <th>Total</th>
-              </tr>
-            </thead>
+          <table className="income-expenses-table">
             <tbody>
               {listdata.map((data, i) => (
                 <tr>
@@ -47,11 +45,6 @@ const IncomeExpenseList = ({
                 </tr>
               ))}
             </tbody>
-            <tfoot>
-              <tr>
-                <td colSpan="2"></td>
-              </tr>
-            </tfoot>
           </table>
         </div>
       ) : null}

@@ -13,7 +13,7 @@ import {
 import IncomeExpenseList from "./IncomeExpenseList";
 import ExpensesList from "./ExpensesList";
 
-const TransactionSummary = ({ summary }) => {
+const TransactionSummary = ({ summary, dateRange }) => {
   const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
     return (
       <text
@@ -58,12 +58,12 @@ const TransactionSummary = ({ summary }) => {
 
   return (
     <div>
-      <Heading title={"Summary"} />
+      <Heading title={"Summary - " + dateRange} />
       <div
         className={
           summary.totalExpenses === 0
-            ? "horizontal-align"
-            : "horizontal-align-space"
+            ? "summary-panel horizontal-align box-shadow blue-background"
+            : "summary-panel horizontal-align-space box-shadow blue-background"
         }
       >
         <IncomeExpenseList
@@ -80,7 +80,7 @@ const TransactionSummary = ({ summary }) => {
         />
       </div>
       {parseInt(summary.totalExpenses) > 0 ? (
-        <div style={{ marginTop: "30px" }}>{renderBarChart}</div>
+        <div className="summary-panel box-shadow">{renderBarChart}</div>
       ) : null}
     </div>
   );

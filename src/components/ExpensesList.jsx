@@ -11,7 +11,8 @@ const ExpensesList = ({ total, listdata }) => {
 
   return (
     <div>
-      <div>Total Expenses: {total}</div>
+      <div className="bold">Total Expenses: {total}</div>
+      <hr className="hr-line" />
       {total === 0 ? (
         <div>No activity found for period.</div>
       ) : (

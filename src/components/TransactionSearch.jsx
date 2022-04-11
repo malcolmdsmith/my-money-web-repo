@@ -174,6 +174,11 @@ class TransactionSearch extends FormState {
     this.setState({ data: obj });
   };
 
+  getDateRange = () => {
+    const { dateFrom, dateTo } = this.state.data;
+    return dateFrom + " to " + dateTo;
+  };
+
   render() {
     const {
       categories,
@@ -330,7 +335,10 @@ class TransactionSearch extends FormState {
               <>
                 {resultsFormat === "graph" ? (
                   <div style={{ marginBottom: "30px" }}>
-                    <TransactionSummary summary={summary} />
+                    <TransactionSummary
+                      summary={summary}
+                      dateRange={this.getDateRange()}
+                    />
                   </div>
                 ) : (
                   <div>

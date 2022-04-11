@@ -36,9 +36,12 @@ class TransactionAllocator extends Component {
   async componentDidMount() {
     const user = getCurrentUser();
     const transactions = await getTransactionsNotCategorized(user.id);
-    console.info(user);
+    //console.info("trans...", transactions.length);
+    //console.info(user);
+    //return;
     if (!user) return;
     const types = await getBudgetTypes(user.id);
+    console.info(types.length);
     this.setState({ transactions, types, user });
   }
 
